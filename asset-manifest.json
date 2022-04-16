@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Evento-Bomberos-Fibom/static/css/main.885f661e.css",
+    "main.js": "/Evento-Bomberos-Fibom/static/js/main.880b7d36.js",
+    "static/js/787.c1112931.chunk.js": "/Evento-Bomberos-Fibom/static/js/787.c1112931.chunk.js",
+    "index.html": "/Evento-Bomberos-Fibom/index.html",
+    "main.885f661e.css.map": "/Evento-Bomberos-Fibom/static/css/main.885f661e.css.map",
+    "main.880b7d36.js.map": "/Evento-Bomberos-Fibom/static/js/main.880b7d36.js.map",
+    "787.c1112931.chunk.js.map": "/Evento-Bomberos-Fibom/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.885f661e.css",
+    "static/js/main.880b7d36.js"
+  ]
+}

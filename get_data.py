@@ -14,7 +14,7 @@ scope = [
 ]
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-    "service-fibon-key.json", scope
+    "../service-fibon-key.json", scope
 )
 
 client = gspread.authorize(creds)

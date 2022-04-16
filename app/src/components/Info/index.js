@@ -67,19 +67,23 @@ const Info = () => {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Evento Fibom</h1>
-                <h2>Haz sido registrado con exito ¡Ya puedes ingresar!</h2>
-                <h3>Informacion</h3>
+                <div className='main-container'>
+                    <h1>Evento Fibom</h1>
+                    <h2>Haz sido registrado con exito ¡Ya puedes ingresar!</h2>
+                    <div className='info'>
+                        <h3>Informacion</h3>
 
-                {/* create a list that contains all the info of the fireman */}
-                <ul>
-                    <li>Nombre: <span>{name}</span></li>
-                    <li>Mail: <span>{email}</span></li>
-                    <li>Rut: <span>{rut}</span></li>
-                    <li>Region y comuna: <span>{region}</span></li>
-                    <li>Cuerpo de Bomberos: <span>{group}</span></li>
-                    <li>Cargo: <span>{position}</span></li>
-                </ul>
+                        {/* create a list that contains all the info of the fireman */}
+                        <ul>
+                            <li>Nombre: <span>{name}</span></li>
+                            <li>Mail: <span>{email}</span></li>
+                            <li>Rut: <span>{rut}</span></li>
+                            <li>Region y comuna: <span>{region}</span></li>
+                            <li>Cuerpo de Bomberos: <span>{group}</span></li>
+                            <li>Cargo: <span>{position}</span></li>
+                        </ul>
+                    </div>
+                </div>
             </header>
         </div>
     );

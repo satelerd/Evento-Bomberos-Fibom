@@ -12,14 +12,14 @@ const Info = () => {
     const [position, setPosition] = useState();
 
 
-    const { id } = useParams();
+    const { postId } = useParams();
     // http://localhost:3000/Sebastian_Diaz&sdiazdelafuente9@gmail.com&17.856.856-2&Región_Metropolitana,_Comuna_de_San_Joaquin&Cuerpo_de_Bomberos_de_San_Joaquin&Bombero
-    console.log(id);
+    console.log(postId);
 
     useEffect(() => {
         // the following will take the id and create variables acording to the id
         // first we split the id the & and take the second part
-        const info = id.split('&');
+        const info = postId.split('&');
         // make a loop to take the info and create variables
         for (let i = 0; i < info.length; i++) {
             if (i === 0) {
@@ -61,7 +61,7 @@ const Info = () => {
                 setPosition(info[i]);
             }
         }
-    }, [id]);
+    }, [postId]);
 
 
     return (

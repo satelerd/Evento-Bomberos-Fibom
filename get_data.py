@@ -7,7 +7,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 from pprint import pprint
 import pandas as pd
 
-## Connect to the google sheet
+## CONNECT TO THE GOOGLE SHEET
+
 scope = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/spreadsheets",
@@ -40,6 +41,36 @@ data = sheet.get_all_records()
 # pprint(data)
 
 
-## Use the data to create a dataframe
+## DATA MANIPULATION
+
+# Use the data to create a dataframe
 df = pd.DataFrame(data)
 print(df)
+
+# now create a loop to get the data from the dataframe
+for index, row in df.iterrows():
+    # check if the row is empty
+    if row["Ingrese su nombre completo "] == "":
+        continue
+
+    name = row["Ingrese su nombre completo "]
+    email = row["Dirección de correo electrónico"]
+    rut = row["Ingrese su rut (12345678-9)"]
+
+    # create a str that will be the link to the users page
+    # the link should be in the format:
+    # http://aws-react-fibom.s3-website-sa-east-1.amazonaws.com/{name}&{email}&{rut}
+    link = (
+        "http://aws-react-fibom.s3-website-sa-east-1.amazonaws.com/"
+        + name
+        + "&"
+        + email
+        + "&"
+        + rut
+    )
+
+    # add a col to the sheet with the link
+    sheet.update_cell(index + 2, 13, link)
+
+    # now convert the link to a QR code
+    qr = qrcode.QRCode(
